@@ -1,7 +1,7 @@
 ---
 title: "Naive SiLU, and the first benchmark against PyTorch"
 date: 2026-10-03 12:00:00 +0000
-categories: [CPU Kernels, Activation]
+categories: [Deep Learning in Rust, Activation]
 tags: [rust, simd, avx2, benchmarking]
 math: true
 ---
