@@ -1,6 +1,6 @@
 ---
 title: "SIMD SiLU implementation and its comparison with torch"
-date: 2026-10-04 12:00:00 +0000
+date: 2026-10-04 00:00:00 +0000
 categories: [Deep Learning in Rust, Activation]
 tags: [rust, simd, avx2, benchmarking]
 math: true
