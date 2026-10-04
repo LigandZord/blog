@@ -6,6 +6,8 @@ tags: [rust, simd, avx2, benchmarking]
 math: true
 ---
 
+*Code: [rust-neural-network-cpu](https://github.com/LigandZord/rust-neural-network-cpu) — see [`src/activation.rs`](https://github.com/LigandZord/rust-neural-network-cpu/blob/main/src/activation.rs)*
+
 ## Why this project
 
 The motivation for this project is to get an understanding of Rust, and why it is becoming popular, particularly in the deep learning community. And to do this, I plan on implementing different deep learning functions from scratch in Rust. The idea is, I get to learn the basics of Rust as a programming language, as well as try to understand other system-level concepts and CPU kernels that make the implementations faster. This is an exploratory series for me to enhance my knowledge of Rust and CPU kernels.

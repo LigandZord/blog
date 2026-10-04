@@ -6,6 +6,8 @@ tags: [rust, simd, avx2, benchmarking]
 math: true
 ---
 
+*Code: [rust-neural-network-cpu](https://github.com/LigandZord/rust-neural-network-cpu) — see [`src/activation.rs`](https://github.com/LigandZord/rust-neural-network-cpu/blob/main/src/activation.rs)*
+
 ## Recap
 
 In the previous post, we saw the naive implementation of the activation function, which is noticeably slower than the torch implementation, as well as slower when we enable multi-threading in torch. In this post, I explore the SIMD implementation of SiLU activation in Rust, and benchmark it against both torch and the naive Rust implementation.
