@@ -20,6 +20,19 @@ For someone moving from Python to Rust, the input to the activation function its
 
 Now, for the naive implementation, we just need to iterate through every element in the array and apply the SiLU formula above.
 
+## System configuration
+
+All benchmarks in this post (and the rest of this series) were run on the same machine, for reference:
+
+| | |
+|---|---|
+| CPU | Intel Core Ultra 7 155H — 11 cores / 22 threads (hyperthreading), 1 socket |
+| Instruction sets | AVX2, FMA, AVX-VNNI (no AVX-512) |
+| RAM | 7.4 GiB (WSL2 VM allocation) |
+| OS | Ubuntu 26.04.1 LTS on WSL2, kernel 6.18.40.1-microsoft-standard-WSL2 |
+| Rust | rustc / cargo 1.98.1 |
+| PyTorch | 2.14.0+cpu, numpy 2.5.3 |
+
 ## Benchmarking methodology
 
 For the naive kernel, I went with flat `&[f32]` / `&mut [f32]` slices rather than a shaped tensor type, which ties back to the point above. Since SiLU is a pure elementwise operation, it doesn't care about the logical shape of the tensor at all, only about the raw contiguous buffer underneath it. That stops being true once I get to GEMM, where the 2D structure of the matrix actually matters to the computation, but for activation it's a non-issue.
